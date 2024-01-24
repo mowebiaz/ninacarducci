@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,38 @@
  	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+	<!--revoir le country, l'image, rajouter itemListement pour offerCatalog ? -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "Nina Carducci",
+			"description": "Nina Carducci - Photographe freelance à Bordeaux. Je capture le Bonheur à travers mes objectifs",
+			"url": "https://ninacarducci.github.io/",
+			"sameAs": [
+				"https://www.instagram.com/ninacarducci.photo/",
+				"https://www.facebook.com/ninacarducciphotography",
+				"https://twitter.com/ninacarducci"
+		  	],
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "68 avenue Alsace-Lorraine",
+				"postalCode": "33200",
+				"addressLocality": "Bordeaux",
+				"addressCountry": "France"
+			},
+			"telephone": "05 56 67 78 89",
+			"openingHours": "Mo-Fr 10:00-19:00",
+			"image": "https://ninacarducci.github.io/assets/images/nina.png",
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Photographie"
+			},
+			"priceRange": "€€"
+		}
+	</script>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
 	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
