@@ -13,19 +13,18 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-
-	<!--revoir le country, l'image, rajouter itemListement pour offerCatalog ? -->
+	<!-- structured data -->
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
 			"@type": "LocalBusiness",
 			"name": "Nina Carducci",
 			"description": "Nina Carducci - Photographe freelance à Bordeaux. Je capture le Bonheur à travers mes objectifs",
-			"url": "https://ninacarducci.github.io/",
+			"url": "https://mowebiaz.github.io/ninacarducci/",
 			"sameAs": [
 				"https://www.instagram.com/ninacarducci.photo/",
-				"https://www.facebook.com/ninacarducciphotography",
-				"https://twitter.com/ninacarducci"
+				"https://www.facebook.com/ninacarducci.photo",
+				"https://twitter.com/ninacarducci.photo"
 		  	],
 			"address": {
 				"@type": "PostalAddress",
@@ -36,7 +35,7 @@
 			},
 			"telephone": "05 56 67 78 89",
 			"openingHours": "Mo-Fr 10:00-19:00",
-			"image": "https://ninacarducci.github.io/assets/images/nina.png",
+			"image": "https://mowebiaz.github.io/ninacarducci/assets/images/nina-carducci.jpg",
 			"hasOfferCatalog": {
 				"@type": "OfferCatalog",
 				"name": "Photographie"
@@ -44,6 +43,23 @@
 			"priceRange": "€€"
 		}
 	</script>
+
+	<!-- Open Graph -->
+	<meta property="og:url" content="https://mowebiaz.github.io/ninacarducci/">
+	<meta property="og:title" content="Nina Carducci - Photographe Freelance à Bordeaux">
+	<meta property="og:description" content="Capturez le bonheur à travers le regard unique de Nina Carducci, photographe freelance à Bordeaux.">
+	<meta property="og:image" content="https://mowebiaz.github.io/ninacarducci/assets/images/nina-carducci.jpg">
+	<meta property="og:type" content="website"> 
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:site_name" content="Nina Carducci Photographie">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@ninacarducci.photo">
+	<meta name="twitter:title" content="Nina Carducci - Photographe freelance à Bordeaux">
+	<meta name="twitter:description" content="Capturez le bonheur à travers le regard unique de Nina Carducci, photographe freelance à Bordeaux.">
+	<meta name="twitter:image" content="https://mowebiaz.github.io/ninacarducci/assets/images/nina-carducci.jpg">
+	<meta name="twitter:url" content="https://mowebiaz.github.io/ninacarducci/">
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
 	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
@@ -80,6 +96,7 @@
 						./assets/images/slider/slider_webp/ryoji_iwata-1440.webp 1440w,
 						./assets/images/slider/slider_webp/ryoji_iwata-1920.webp 1920w"
 						width="1920" height="888"
+						sizes="100vw"
 						alt="Un homme en costume traversant la rue" 
 						class="d-block w-100" 
 						fetchpriority="high">
@@ -249,7 +266,7 @@
 				<div class="form-container">
 					<h2>Une question ? Une demande de devis ?</h2> <!-- à revoir -->
 					<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
-					<form action="" method="post"> <!-- erreur du W3C -->
+					<form method="post"> <!-- erreur du W3C -->
 						<label>Nom</label>
 						<input type="text" name="nom" id="nom">
 						<label>Email</label>
