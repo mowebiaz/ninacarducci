@@ -6,8 +6,8 @@
 	<title>Nina Carducci - photographe</title>
 	<meta name="description" content="Nina Carducci - Photographe freelance à Bordeaux. Je capture le Bonheur à travers mes objectifs"> <!-- à revoir-->
 
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min_minifer.css">
-	<link rel="stylesheet" href="./assets/style.min.css">
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="./assets/style.css">
 
  	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,7 +75,7 @@
 				<li><a href="#gallery">Galerie</a></li>
 				<li><a href="#services">Service</a></li>
 				<li><a href="#contact">Contact</a></li>
-				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="profil instagram de Nina Carducci"></a></li>
+				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="profil instagram de Nina Carducci" width="20" height="20"></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -112,7 +112,6 @@
 						alt="la foule acclamant Nicholas Green lors de son concert"
 						class="d-block w-100" 
 						fetchpriority="low">
-						<!--revoir le alt-->
 					</div>
 					<div class="carousel-item">
 						<img 
@@ -140,8 +139,12 @@
 		<section id="about">
 			<div class="picture left">
 				<img 
-				src="./assets/images/nina_carducci-560.webp"
-				width="562" height="560"
+				src="./assets/images/nina/nina-carducci-1920.jpg"
+				srcset="./assets/images/nina/nina-carducci-375.webp 249w,
+				./assets/images/nina/nina-carducci-768.webp 284w,
+				./assets/images/nina/nina-carducci-1440.webp 400w,
+				./assets/images/nina/nina-carducci-1920.webp 560w"
+				width="560" height="558"
 				alt="Portrait de Nina Carducci"
 				>
 			</div>
