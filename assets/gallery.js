@@ -58,9 +58,6 @@ function modalGalery() {
 				modalContent.appendChild(modalImage)
 			}
 		}
-
-		console.log('modalContent', modalContent)
-
 		// remettre à zéro qd on ferme la modale
 		modalGalery.addEventListener('hide.bs.modal', function () {
 			modalContent.innerHTML = ''
