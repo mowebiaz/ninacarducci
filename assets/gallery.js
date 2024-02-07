@@ -1,3 +1,11 @@
+document.querySelector('.pause').addEventListener('click', function() {
+	const carouselElement = document.getElementById('carouselExampleIndicators')
+	const carouselInstance = bootstrap.Carousel.getInstance(carouselElement)
+	carouselInstance.pause()
+  })
+  
+
+
 function filterByCategory() {
 	const listNavLinks = document.querySelectorAll('.nav-link')
 	const listNavItems = document.querySelectorAll('.nav-item')
@@ -5,17 +13,23 @@ function filterByCategory() {
 
 	listNavLinks.forEach((navLink) => {
 		navLink.addEventListener('click', (event) => {
-			listNavLinks.forEach((navSpan) => navSpan.classList.remove('active'))
+			listNavLinks.forEach((navSpan) => {
+				navSpan.classList.remove('active')
+				navSpan.setAttribute('aria-selected', 'false')
+			})
 			listNavItems.forEach((navItem) => navItem.classList.remove('active'))
 			event.target.classList.add('active')
+			event.target.setAttribute('aria-selected', 'true')
 			event.target.parentElement.classList.add('active')
 
 			const filter = event.target.getAttribute('data-btnCategory')
 			for (let image of listImages) {
 				if (filter !== image.dataset.bsCategory && filter !== 'all') {
 					image.parentElement.style.display = 'none'
+					/*image.parentElement.classList.add('hidden')*/
 				} else {
 					image.parentElement.style.display = 'block'
+					/*image.parentElement.classList.remove('hidden')*/
 				}
 			}
 			document.dispatchEvent(new Event('categoryChanged'))

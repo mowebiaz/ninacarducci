@@ -9,9 +9,10 @@
 			content="Nina Carducci - Photographe freelance à Bordeaux. Je capture le Bonheur à travers mes objectifs"
 		/>
 		<!-- à revoir-->
+		<meta name="robots" content="index, follow">
 
-		<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
-		<link rel="stylesheet" href="./assets/style.css" />
+		<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="./assets/style.min.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +22,6 @@
 			as="style"
 			onload="this.onload=null;this.rel='stylesheet'"
 		/>
-
 
 		<!-- structured data -->
 		<script type="application/ld+json">
@@ -78,7 +78,7 @@
 		<meta name="twitter:url" content="https://mowebiaz.github.io/ninacarducci/" />
 
 		<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
-		<script src="./assets/gallery.js" defer></script>
+		<script src="./assets/gallery.min.js" defer></script>
 
 	</head>
 	<body>
@@ -96,7 +96,7 @@
 							href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
 							target="_blank"
 							><img
-								src="assets/images/instagram.svg"
+								src="assets/images/instagram.png"
 								alt="profil instagram de Nina Carducci"
 								width="20"
 								height="20"
@@ -108,6 +108,11 @@
 		<main>
 			<div id="slider">
 				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+ 					<button class="pause" 
+					aria-controls="carouselExampleIndicators" 
+					aria-label="Pause le défilement du carousel">
+						<img src="assets/images/pause_button.svg" alt="pause button">
+					</button>
 					<div class="carousel-indicators">
 						<button
 							type="button"
@@ -237,21 +242,40 @@
 				<h2 class="title">Portfolio</h2>
 				<div class="container py-3">
 					<div class="gallery">
-						<ul class="my-4 tags-bar nav nav-pills">
+						<ul class="my-4 nav nav-pills">
 							<li class="nav-item active">
-								<span class="nav-link active" data-btnCategory="all">Tous</span>
+								<button type="button"
+								class="nav-link active" 
+								data-btnCategory="all" 
+								aria-selected="true"
+								>Tous</button>
+							</li>
+							<li class="nav-item" >
+								<button type="button"
+								class="nav-link" 
+								data-btnCategory="Concert" 
+								aria-selected="false"
+								>Concert</button>
 							</li>
 							<li class="nav-item">
-								<span class="nav-link" data-btnCategory="Concert">Concert</span>
+								<button type="button"
+								class="nav-link" 
+								data-btnCategory="Entreprises" 
+								aria-selected="false"
+								>Entreprises</button>
 							</li>
 							<li class="nav-item">
-								<span class="nav-link" data-btnCategory="Entreprises">Entreprises</span>
+								<button type="button"
+								class="nav-link" 
+								data-btnCategory="Mariages" 
+								aria-selected="false"
+								>Mariages</button>
 							</li>
 							<li class="nav-item">
-								<span class="nav-link" data-btnCategory="Mariages">Mariages</span>
-							</li>
-							<li class="nav-item">
-								<span class="nav-link" data-btnCategory="Portrait">Portrait</span>
+								<button type="button"
+								class="nav-link" 
+								data-btnCategory="Portrait" 
+								aria-selected="false">Portrait</button>
 							</li>
 						</ul>
 						<div class="gallery-items-row row">
@@ -477,9 +501,9 @@
 						<form method="post">
 							<!-- erreur du W3C -->
 							<label for="nom">Nom</label>
-							<input type="text" name="nom" id="nom" />
+							<input type="text" name="nom" id="nom" autocomplete="family-name"/>
 							<label for="email">Email</label>
-							<input type="email" name="email" id="email" />
+							<input type="email" name="email" id="email" autocomplete="email"/>
 							<label for="message">Message</label>
 							<textarea name="message" id="message" cols="30" rows="10"></textarea>
 <!-- 							<input type="submit" value="Envoyer" />

@@ -60,6 +60,24 @@ nav a {
 	height: auto;
 }
 
+.pause {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background: none;
+	border: none;
+	padding-top: 0.5rem;
+
+}
+
+.pause img {
+	width: 30px;
+}
+
 #about {
 	display: flex;
 	background-color: #f6d2b8;
@@ -149,6 +167,73 @@ nav a {
 	padding: 0.5em;
 }
 
+/* ajouté */
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+
+@keyframes slideAndFade {
+	from {
+		opacity: 0;
+		transform: translate(-50px, -50px);
+	}
+	to {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+
+@keyframes unfoldEffect {
+	from {
+		transform: scale(0);
+		transform-origin: top left;
+	}
+	to {
+		transform: scale(1);
+		transform-origin: top left;
+	}
+}
+
+@keyframes myAnim {
+	0% {
+		background-position: left top;
+		background-size: 0%;
+		
+	}
+
+	100% {
+		background-position: left top;
+		background-size: 100%;
+	}
+}
+
+@keyframes opacityEffect {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+	
+}
+
+/*.item-column {
+	/*animation: unfoldEffect 0.5s ease-in;
+	animation: opacityEffect 0.5s ease-in;
+/*animation: myAnim 2s ease 0s 1 normal forwards;
+}*/
+
+
+/* fin d'ajout */
+
+
+  
+
 .gallery-item:hover {
 	cursor: pointer;
 }
@@ -219,8 +304,7 @@ p.quote__text {
 
 p.quote__author {
 	font-family: Spectral;
-	font-weight: 800;
-	font-size: 22px;
+	font-size: 19px;
 	margin: 0;
 }
 
