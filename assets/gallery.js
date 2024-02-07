@@ -23,6 +23,8 @@ function filterByCategory() {
 	})
 }
 
+
+
 function modalGalery() {
 	const modalGalery = document.getElementById('modalGalery')
 
@@ -36,12 +38,11 @@ function modalGalery() {
 		const activeCategory = activeLink.getAttribute('data-btnCategory')
 		// Button that triggered the modal
 		const clickedImage = event.relatedTarget
-		// Extract info from data-bs-* attributes
 		const clickedImageSrc = clickedImage.src
 
 		const modalContent = modalGalery.querySelector('#modalCarousel .carousel-inner')
 
-		const listImages = document.querySelectorAll('.gallery-item') /* répétition */
+		const listImages = document.querySelectorAll('.gallery-item')  /*répétition */
 		for (let image of listImages) {
 			if (activeCategory === image.dataset.bsCategory || activeCategory === 'all') {
 				const modalImage = document.createElement('div')
@@ -51,7 +52,6 @@ function modalGalery() {
 				}
 				const modalImg = document.createElement('img')
 				modalImg.classList.add('d-block', 'w-100') /* à revoir */
-				/*modalImg.classList.add('img-fluid')*/
 				modalImg.setAttribute('src', image.src)
 				modalImg.setAttribute('alt', image.alt)
 				modalImage.appendChild(modalImg)
@@ -59,11 +59,11 @@ function modalGalery() {
 			}
 		}
 		// remettre à zéro qd on ferme la modale
-		modalGalery.addEventListener('hide.bs.modal', function () {
+		modalGalery.addEventListener('hidden.bs.modal', function () {
 			modalContent.innerHTML = ''
 		})
 	})
-}
+} 
 
 filterByCategory()
 modalGalery()

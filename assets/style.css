@@ -112,9 +112,6 @@ nav a {
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
 .title {
 	text-align: center;
 	padding-block: 2em;
@@ -124,7 +121,7 @@ nav a {
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-	color: #fff;
+	color: black;
 	background-color: #beb45a;
 	border-radius: 0;
 }
@@ -137,11 +134,13 @@ nav a {
 	margin-bottom: 0 !important;
 	padding: 0;
 }
+
 .item-column::after {
 	content: '';
 	display: block;
 	padding-bottom: 100%;
 }
+
 .gallery-item {
 	position: absolute;
 	width: 100%;
@@ -152,6 +151,10 @@ nav a {
 
 .gallery-item:hover {
 	cursor: pointer;
+}
+
+#modalCarousel .carousel-item {
+	transition: none;
 }
 
 .mg-prev,
@@ -303,9 +306,14 @@ form textarea {
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
-input[type='submit'] {
+button[type='submit'] {
+	appearance: none;
 	background-color: #beb45a;
 	padding: 0.5em 1em;
+	width: 100%;
+	border: 1px solid;
+	margin-bottom: 20px;
+	height: 2.5em;
 }
 
 @media all and (max-width: 1180px) {
