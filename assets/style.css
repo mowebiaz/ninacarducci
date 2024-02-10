@@ -2,10 +2,12 @@ body {
 	max-width: 1920px;
 	margin: auto;
 }
+
 * {
-	font-family: 'Inter';
+	font-family: 'Inter', sans-serif;
 	font-style: normal;
 }
+
 header {
 	background-color: white;
 	position: sticky;
@@ -71,7 +73,6 @@ nav a {
 	background: none;
 	border: none;
 	padding-top: 0.5rem;
-
 }
 
 .pause img {
@@ -111,13 +112,15 @@ nav a {
 #about-me {
 	flex: 2;
 }
+
 .about-me__title {
 	margin-top: 1em;
 	margin-bottom: 60px;
 	font-size: 30px;
 }
+
 #about-me p.about-me__introduction {
-	font-family: 'Spectral';
+	font-family: 'Spectral', serif;
 	font-weight: 800;
 	font-style: italic;
 	font-size: 1rem;
@@ -125,6 +128,7 @@ nav a {
 	width: 60%;
 	line-height: 1.2;
 }
+
 #about-me p {
 	width: 80%;
 	font-size: 14px;
@@ -134,19 +138,23 @@ nav a {
 	text-align: center;
 	padding-block: 2em;
 }
+
 .gallery .nav {
 	justify-content: center;
 }
+
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
 	color: black;
 	background-color: #beb45a;
 	border-radius: 0;
 }
+
 .nav-pills .nav-link {
 	color: #000;
 	cursor: pointer;
 }
+
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
@@ -167,7 +175,6 @@ nav a {
 	padding: 0.5em;
 }
 
-/* ajouté */
 .hidden {
 	display: none;
 }
@@ -176,63 +183,21 @@ nav a {
 	display: block;
 }
 
-@keyframes slideAndFade {
-	from {
-		opacity: 0;
-		transform: translate(-50px, -50px);
-	}
-	to {
-		opacity: 1;
-		transform: translate(0, 0);
-	}
-}
-
-
+/** animation for galery filters **/
 @keyframes unfoldEffect {
-	from {
-		transform: scale(0);
-		transform-origin: top left;
-	}
-	to {
-		transform: scale(1);
-		transform-origin: top left;
-	}
-}
-
-@keyframes myAnim {
 	0% {
-		background-position: left top;
-		background-size: 0%;
-		
+		transform: scale(0);
+		transform-origin: 0% 0%;
 	}
-
 	100% {
-		background-position: left top;
-		background-size: 100%;
+		transform: scale(1);
+		transform-origin: 0% 0%;
 	}
 }
 
-@keyframes opacityEffect {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-	
+.item-column.visible {
+	animation: unfoldEffect 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
-/*.item-column {
-	/*animation: unfoldEffect 0.5s ease-in;
-	animation: opacityEffect 0.5s ease-in;
-/*animation: myAnim 2s ease 0s 1 normal forwards;
-}*/
-
-
-/* fin d'ajout */
-
-
-  
 
 .gallery-item:hover {
 	cursor: pointer;
@@ -275,7 +240,7 @@ nav a {
 }
 
 .quote {
-	font-family: 'Spectral';
+	font-family: 'Spectral', serif;
 	font-style: italic;
 	width: 70%;
 	margin: auto;
@@ -287,7 +252,7 @@ blockquote {
 }
 
 p.quote__text {
-	font-family: Spectral;
+	font-family: 'Spectral', serif;
 	font-style: italic;
 	font-weight: 300;
 	font-size: calc(1.375rem + 1.5vw);
@@ -313,6 +278,7 @@ p.quote__author {
 	background-color: #a8d5d8;
 	position: relative;
 }
+
 #services .container::before {
 	content: ' ';
 	background-color: #1c6474;
@@ -353,6 +319,7 @@ p.quote__author {
 #contact .container {
 	display: flex;
 }
+
 .picture.right::before {
 	content: ' ';
 	background-color: #beb45a;
@@ -363,9 +330,11 @@ p.quote__author {
 	right: 0;
 	z-index: -1;
 }
+
 .form-container {
 	flex: 2;
 }
+
 form {
 	display: flex;
 	flex-direction: column;
@@ -390,6 +359,7 @@ form textarea {
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
+
 button[type='submit'] {
 	appearance: none;
 	background-color: #beb45a;
