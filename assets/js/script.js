@@ -65,7 +65,7 @@ function updateModalForImage(clickedImage, activeCategory) {
 		}
 	}
 }
-/**  Show the gallery modal and update it  **/
+/**  Show the galery modal and update it  **/
 function showModalGalery() {
 	const modalGalery = document.getElementById('modalGalery')
 
